@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function varScoping(){
+        var x=1;
+        let y=1 //can't be redecalre and can't use out of the function scope 
+        if(true){
+            var x=2;
+            var z=90
+            //var y=2;
+            console.log(x);
+            console.log(y);
+
+        }
+        console.log(x);
+        console.log(z);
+
+
+    }
+   
+    varScoping();
+    console.log("Hello World");
+    const a=["hello" , "bye" , "takecare" , 23 , 'klklkl', true , 90 ]
+    for ( element in a ){
+        console.log(a[element]);
+    }
+
+    </script>
+    <style>
+        .mainContainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 150px;
+            margin-top: 50px;
+            color: blue;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mainContainer">
+        <p>Content</p>
+        <div class="con1 content">This is the first Line</div>
+        <div class="con2 content" id ="heading">This is the second line</div>
+        
+        <div class="con3 content">This is the third line </div>
+    </div>
+    <button class="button" onclick="history()">Go Back</button>
+    <script>
+        alert(location.href);
+        if (confirm("Want to visit youtube")){
+            location.href="https://www.youtube.com/";
+        }
+        function history(){
+            //window.history.back();
+            console.log(document.getElementsByClassName('.con3'));
+            document.querySelector('.content').innerHTML="THIS IS STARTING ";
+        }
+        console.log(document.documentElement);
+        console.log(document.head);
+        console.log(document.body);
+        console.log(document.body.childNodes);// inclue tab and space also
+        console.log(document.body.children );// to get without tab 
+        console.log(document.children);
+        console.log(document.childNodes.length);
+
+
+        //To chacek whether element have child or not 
+        console.log(document.hasChildNodes());
+
+        console.log(document.body.firstChild);
+        console.log(document.body.firstElementChild.firstElementChild);
+        document.body.firstElementChild.firstElementChild.style.color="orange";
+        console.log(document.body.parentElement);
+        console.log(document.body.parentNode); // it can give output of text also 
+        console.log(document.head.nextElementSibling);
+        console.log(document.body.previousElementSibling);
+
+        var element = document.getElementById('heading');
+        console.log(element);
+        
+
+        element = document.getElementsByClassName('con2');// return HTML Collection 
+        console.log(element);
+
+        element = document.querySelector(' p ');
+        console.log(element);
+        element.style.color="purple"
+        element.style.fontWeight="900"
+
+
+
+
+
+    </script>
+</body>
+</html>
