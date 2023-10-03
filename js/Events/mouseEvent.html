@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content{
+            padding: 15px;
+            font-weight: 500;
+        }
+        .container{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin-inline: auto;
+}
+
+    </style>
+</head>
+<body>
+    <div class="content"  >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda similique animi nihil ullam labore dolore ea? Eaque, optio. Beatae distinctio voluptatum cumque earum voluptate est nam fuga tempora sed deserunt, reiciendis architecto ipsa blanditiis? Provident natus officia iure fugiat aliquam sequi quasi consectetur velit facilis voluptatibus placeat esse et ipsum aspernatur reprehenderit, commodi, eos odio minima impedit soluta vel voluptates! Eligendi, voluptates nam? Mollitia vitae dolore porro necessitatibus, beatae pariatur aliquid unde hic distinctio doloremque, nulla quibusdam, natus provident ipsum ex modi reprehenderit repudiandae atque vero? Culpa, ad mollitia? In.
+    </div>
+    <div class="container" ></div>
+
+    <script>
+
+     const element = document.querySelector(".content");
+     element.addEventListener('onmouseup', ()=>{
+        element.style.fontWeight="900";
+     })
+     element.addEventListener('onmousedown', ()=>{
+        element.style.fontWeight="100";
+     })
+
+     const elem = document.querySelector(".container");
+     elem.addEventListener('mouseenter' , () =>{
+        elem.style.backgroundColor="orange";
+     })
+
+     elem.addEventListener('mouseleave' , () =>{
+        elem.style.backgroundColor="brown";
+     })
+    </script>
+</body>
+</html>

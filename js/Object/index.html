@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // console.log(this);
+
+        // function count(){
+        //     console.log(this);
+        // }
+        // count();
+
+        // var a=90;
+        // function count(){
+        //     console.log(this.a);
+        // }
+        // count();
+
+
+        const obj = {
+            name: "Manavi Yadav",
+            myName(){
+                console.log(this);
+                console.log(this.name);
+            }
+        }
+        obj.myName();
+
+        const obj2 = {
+            name: "Manavi Yadav",
+            myName2: ()=>{
+                console.log(this);
+                console.log(this.name);
+            }
+        }
+        obj2.myName2();
+
+
+    </script>
+</body>
+</html>

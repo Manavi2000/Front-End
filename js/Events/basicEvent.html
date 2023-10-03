@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: cornflowerblue;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            gap: 70px;
+            align-items: center;
+            
+
+        }
+        .button{
+            background-color: grey;
+            color: white;
+            border: 1px solid grey;
+            padding: 1em;
+            border-radius: 4px;
+            width: 170px;
+            text-align: center;
+        }
+        a{
+            border: none;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            background-color: grey;
+}
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="desc">4 ways of writing the events in JS</p>
+        <div class="button" >
+            <a href="" class="link">inline Event alert()</a>
+        </div>
+        <div class="button" onclick=callingFunction()>
+            <a href="" class="link">function calling Event</a>
+        </div>
+        <div class="buttonq button" id="button3">
+            <a href="" class="link">inlineEvent</a>
+        </div>
+        <div class="buttonp button" id="button1">
+            <a href="" class="link">Event Listeners </a>
+        </div>
+    </div>
+    <script>
+
+        const callingFunction = () =>{
+            console.log(event); // this is the parent object of event
+            console.log(event.target); // To which element we have target using this event
+            console.log(event.type); // The typr of event which is trigger
+            console.log(0);
+            alert("Called by the function call");
+        }
+
+        let elementbutton = document.querySelector('.buttonq');
+        elementbutton.onclick= ()=>{
+            alert("This is been called by the refrence method")
+        }
+        elementbutton.onclick= ()=>{
+            console.log("This is been called by the refrence method")
+        }
+
+        let element = document.querySelector('#button1');
+        element.addEventListener('click' , () =>{
+            alert("This option is created using addEvent listner");
+        });
+
+        element.addEventListener('click' , () =>{
+            console.log("This option is created using addEvent listner");
+        });
+
+    </script>
+</body>
+</html>

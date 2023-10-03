@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+            gap: 30px;
+            background-color: darkorange;
+            font-weight: 800;
+        }
+        input{
+            padding: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="enter">Enter your name </p>
+        <input type="text" name="name" id="name" class="name" onkeypress=Letter(event)>
+        <p class="output"></p>
+    </div>
+    <script>
+        // const Letter = (event)=>{
+        //     let element= document.querySelector(".name");
+        //     let output = document.querySelector(".output");
+        //    alert("This is output");
+               
+        //        console.log(event);
+        //        output.innerHTML=`The value which is enter ${event.key}`;
+      
+        // }
+
+        
+
+        let element= document.querySelector(".name");
+        let output = document.querySelector(".output");
+        console.log(element,output)
+        element.addEventListener("keypress" , (event)=>{
+               alert("This is output");
+               console.log(`The value which is enter ${event.key}`);
+               output.innerHTML=`The value which is enter ${event.key}`;
+        });
+    </script>
+</body>
+</html>
